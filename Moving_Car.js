@@ -15,7 +15,14 @@ function draw() {
   background(135, 206, 235);
 
   // ===== BEGIN BILLBOARD HERE =====
-  
+  fill(65,200,100);
+  rect(250,18,200,100,20);
+  fill(0,0,0);
+  text("No littering!", 260, 50);
+  fill(0,90,300);
+  text("Lets keep Earth Clean and Green!", 265, 70);       fill(0,0,0);
+  rect(347.5,118,5,110);
+  text("#GreenTeam", 280, 90);
   // ===== END BILLBOARD HERE =====
 
   // ===== DRAW GRASS =====
@@ -26,14 +33,23 @@ function draw() {
   fill(70, 70, 70); // Gray road
   rect(0, carY + 30, width, 60);
   
+  
   // Road lines (dashed yellow line)
   stroke(255, 255, 0);
   strokeWeight(3);
   for (let i = 0; i < width; i += 40) {
     line(i, carY + 60, i + 20, carY + 60);
   }
-  noStroke();
 
+
+
+  //street signs
+  // ===== DRAW SPEED SIGN =====
+  stroke(0,0,0)
+  stroke(100,90,40);
+  noStroke();
+  
+  circle(150,330,30);
   // ===== DRAW CAR =====
   drawCar(carX, carY);
 
@@ -74,4 +90,7 @@ function drawCar(x, y) {
   // Headlight (yellow)
   fill(255, 255, 0);
   circle(x + 95, y + 15, 8);
+  
+  
+
 }
