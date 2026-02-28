@@ -2,13 +2,13 @@
 let carX = 0;
 let carY;
 let carSpeed = 3;
-
 function setup() {
   createCanvas(800, 400);
   // Start car in the middle vertically
   carY = height / 2;
 }
 
+ 
 function draw() {
   // ===== DRAW BACKGROUND =====
   // Sky (light blue)
@@ -20,7 +20,8 @@ function draw() {
   fill(0,0,0);
   text("No littering!", 260, 50);
   fill(0,90,300);
-  text("Lets keep Earth Clean and Green!", 265, 70);       fill(0,0,0);
+  text("Lets keep Earth Clean and Green!", 265,70);
+  fill(0,0,0);
   rect(347.5,118,5,110);
   text("#GreenTeam", 280, 90);
   // ===== END BILLBOARD HERE =====
@@ -50,6 +51,18 @@ function draw() {
   noStroke();
   
   circle(150,330,30);
+  circle(300, 330, 30);
+  fill(0,0,0);
+  rect(187.5, 315, 10, 40);
+  rect(247.5, 315, 10, 40);
+  fill(150, 75, 0);
+  rect(187.5 - 15, 315, 100, 25);
+  fill(204, 85, 0);
+  fill(255, 255, 255);
+  rect(100,275, -40, 10);
+  rect(100,250, -40, 10);
+  rect(100,225, -40, 10);
+  
   // ===== DRAW CAR =====
   drawCar(carX, carY);
 
@@ -90,7 +103,16 @@ function drawCar(x, y) {
   // Headlight (yellow)
   fill(255, 255, 0);
   circle(x + 95, y + 15, 8);
-  
+  mouseClicked();  
   
 
 }
+function mouseClicked() {
+  if (mouseX < 50 || mouseY < 50) {
+    background(0,0,0);
+    
+  }
+
+    // Code to run if the mouse is near the bottom.
+}
+
